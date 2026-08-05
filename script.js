@@ -142,24 +142,13 @@ if (cursor && follower && cursorLabel && supportsCustomCursor) {
   animateFollower();
 }
 
-/* Page transition */
-document.querySelectorAll('a[href$=".html"], a[href*=".html#"]').forEach((link) => {
-  link.addEventListener("click", (event) => {
-    if (
-      event.ctrlKey ||
-      event.metaKey ||
-      event.shiftKey ||
-      link.target === "_blank" ||
-      link.origin !== window.location.origin
-    ) {
-      return;
-    }
+/* Restore the page correctly when returning with the browser Back button. */
+window.addEventListener("pageshow", () => {
+  document.body.classList.remove(
+    "page-leaving",
+    "cursor-click",
+    "cursor-hidden"
+  );
 
-    event.preventDefault();
-    document.body.classList.add("page-leaving");
-
-    window.setTimeout(() => {
-      window.location.href = link.href;
-    }, 240);
-  });
+  document.querySelector(".site-loader")?.classList.add("is-hidden");
 });

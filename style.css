@@ -1944,8 +1944,6 @@ button {
 .footer-top-link:hover { color:#fff; }
 
 .work-detail-body { opacity:1; transition:opacity .35s ease; }
-body.page-leaving { opacity:0; }
-
 @media(max-width:780px) {
   .works-grid { grid-template-columns:1fr; gap:70px; }
   .works-grid .work-card,
