@@ -1,12 +1,6 @@
 const header = document.querySelector(".site-header");
 const menuButton = document.querySelector(".menu-button");
 const nav = document.querySelector(".global-nav");
-const loader = document.querySelector(".site-loader");
-
-window.addEventListener("load", () => {
-  window.setTimeout(() => loader?.classList.add("is-hidden"), 650);
-});
-
 if (header) {
   window.addEventListener("scroll", () => {
     header.classList.toggle("scrolled", window.scrollY > 30);
@@ -147,8 +141,20 @@ window.addEventListener("pageshow", () => {
   document.body.classList.remove(
     "page-leaving",
     "cursor-click",
-    "cursor-hidden"
+    "cursor-hidden",
+    "menu-open"
   );
 
-  document.querySelector(".site-loader")?.classList.add("is-hidden");
+  document.querySelectorAll(".reveal").forEach((item) => {
+    item.classList.add("is-visible");
+  });
+
+  if (nav) {
+    nav.classList.remove("is-open");
+  }
+
+  if (menuButton) {
+    menuButton.setAttribute("aria-expanded", "false");
+    menuButton.setAttribute("aria-label", "メニューを開く");
+  }
 });
