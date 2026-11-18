@@ -431,7 +431,7 @@ button {
 
 .service-icons {
   display: grid;
-  grid-template-columns: repeat(7, minmax(0, 1fr));
+  grid-template-columns: repeat(8, minmax(0, 1fr));
   gap: 12px;
   max-width: 1200px;
   margin: 80px auto 0;
@@ -2341,3 +2341,50 @@ button {
 @keyframes loaderLine {
   to { width: 110px; }
 }
+
+/* Project 01 — Business Card Collection */
+.business-card-thumb { position:relative; display:flex; align-items:center; justify-content:center; overflow:hidden; background:linear-gradient(135deg,#ede4d7,#f5f1ec 52%,#e0e8eb); }
+.business-card-thumb .business-thumb-main { position:absolute; width:66%; height:auto; max-height:76%; object-fit:contain; left:7%; top:13%; box-shadow:0 15px 35px rgba(44,40,36,.17); transform:rotate(-5deg); }
+.business-card-thumb .business-thumb-sub { position:absolute; width:40%; height:auto; max-height:70%; object-fit:contain; right:6%; bottom:8%; box-shadow:0 15px 35px rgba(44,40,36,.19); transform:rotate(7deg); }
+.business-card-project .card-hero-preview { background:#eee8df; display:flex; align-items:center; justify-content:center; padding:24px; }
+.business-card-project .card-hero-preview img { width:100%; height:auto; max-height:350px; object-fit:contain; box-shadow:0 12px 30px rgba(0,0,0,.12); }
+.business-feature { display:grid; grid-template-columns:minmax(0,1.2fr) minmax(0,.8fr); align-items:center; gap:clamp(28px,5vw,76px); }
+.business-feature > img { width:100%; height:auto; display:block; box-shadow:0 14px 40px rgba(55,48,42,.13); }
+.business-feature-copy { line-height:2.05; }
+.business-feature-copy h3 { font-size:clamp(23px,2.4vw,34px); font-weight:500; line-height:1.6; margin:15px 0 25px; }
+.business-kicker { font-family:'Cormorant Garamond',serif; letter-spacing:.13em; color:#6b8593; font-size:15px; }
+.business-feature-copy p { margin:0 0 16px; }
+.business-gallery-intro { max-width:750px; line-height:2; margin:0 0 34px; }
+.business-card-gallery { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:32px; }
+.business-card-gallery figure { margin:0; }
+.business-card-gallery img { display:block; width:100%; height:auto; aspect-ratio:1/1; object-fit:cover; }
+.business-card-gallery figcaption { padding:14px 0; font-family:'Cormorant Garamond',serif; letter-spacing:.08em; font-size:18px; }
+@media(max-width:700px){ .business-feature{grid-template-columns:1fr;} .business-card-gallery{gap:14px;} .business-card-gallery figcaption{font-size:14px;} .business-card-project .card-hero-preview{padding:12px;} }
+
+/* Business Card Design: separate project showcases */
+.business-section-nav{display:flex;justify-content:center;gap:18px;flex-wrap:wrap;padding:32px 22px;background:var(--ivory);border-bottom:1px solid var(--line)}
+.business-section-nav a{display:flex;align-items:baseline;gap:12px;padding:14px 24px;border:1px solid var(--line);text-decoration:none;color:inherit;transition:background .2s,border-color .2s}
+.business-section-nav a:hover{background:#fff;border-color:#a7b9c1}
+.business-section-nav a span{font-family:'Cormorant Garamond',serif;font-size:24px}
+.business-section-nav a small{font-size:11px;color:var(--blue-deep)}
+.business-card-project #totoruru,.business-card-project #bridra{scroll-margin-top:90px}
+.business-concept{max-width:850px;line-height:2.2}
+.business-concept h3{font-weight:500;font-size:clamp(21px,2.4vw,32px);line-height:1.6;margin:0 0 28px}
+.business-concept p{margin:0 0 18px}
+.business-privacy-note{font-size:12px;color:#66777c}
+.business-overview-note{margin-top:22px;color:#66777c;font-size:13px}
+.business-project-divider{background:#dfe8e9;text-align:center;padding:35px 20px;font-family:'Cormorant Garamond',serif;font-size:25px;letter-spacing:.14em;color:#45616d}
+@media(max-width:700px){.business-section-nav{gap:10px}.business-section-nav a{width:100%;justify-content:center;padding:12px}.business-section-nav a span{font-size:21px}.business-project-divider{padding:25px}}
+
+/* Portfolio mockup showcase: exact original artwork composited into presentation frames */
+.works-grid .mockup-thumb {position:relative;overflow:hidden;background:#ede9e2;min-height:300px;}
+.works-grid .mockup-thumb .mockup-cover {position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center;transform:none;}
+.works-grid .mockup-thumb:hover .mockup-cover {transform:scale(1.035);transition:transform .5s ease;}
+.mockup-showcase-section {background:#faf8f5;}
+.mockup-showcase-grid {display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:30px;margin-top:30px;}
+.mockup-showcase-grid:has(> :only-child) {grid-template-columns:minmax(0,1fr);max-width:1000px;}
+.mockup-showcase-item {margin:0;min-width:0;}
+.mockup-showcase-item img {display:block;width:100%;height:auto;aspect-ratio:1400/920;object-fit:cover;border-radius:5px;box-shadow:0 16px 40px rgba(47,39,32,.09);}
+.mockup-showcase-item figcaption {font-size:14px;letter-spacing:.04em;color:#6b6662;margin-top:13px;}
+.mockup-note {line-height:1.9;font-size:13px;color:#77716d;}
+@media(max-width:700px){.mockup-showcase-grid{grid-template-columns:1fr;gap:25px}.works-grid .mockup-thumb{min-height:220px;}}
