@@ -431,7 +431,7 @@ button {
 
 .service-icons {
   display: grid;
-  grid-template-columns: repeat(8, minmax(0, 1fr));
+  grid-template-columns: repeat(9, minmax(0, 1fr));
   gap: 12px;
   max-width: 1200px;
   margin: 80px auto 0;
@@ -2388,3 +2388,13 @@ button {
 .mockup-showcase-item figcaption {font-size:14px;letter-spacing:.04em;color:#6b6662;margin-top:13px;}
 .mockup-note {line-height:1.9;font-size:13px;color:#77716d;}
 @media(max-width:700px){.mockup-showcase-grid{grid-template-columns:1fr;gap:25px}.works-grid .mockup-thumb{min-height:220px;}}
+
+/* Project 07 — BriDra logo */
+.logo-work-hero{background:linear-gradient(125deg,#f8f5f0,#e5e8e8)}
+.logo-hero-art,.logo-final-art{display:flex;align-items:center;justify-content:center;background:#fbfaf7;border:1px solid #e8e1d8;box-shadow:0 20px 55px rgba(47,39,32,.08)}
+.logo-hero-art{min-height:430px;padding:55px}
+.logo-hero-art img{display:block;width:100%;max-width:360px;max-height:420px;object-fit:contain}
+.logo-final-art{min-height:520px;padding:65px}
+.logo-final-art img{display:block;max-width:450px;max-height:480px;width:100%;height:auto;object-fit:contain}
+.logo-caption{text-align:center;color:#817b76;font-size:13px;margin-top:20px}
+@media(max-width:700px){.logo-hero-art{min-height:320px;padding:35px}.logo-hero-art img{max-height:280px}.logo-final-art{min-height:350px;padding:35px}.logo-final-art img{max-height:320px}}
